@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://5ut53eqs4bry"]
+
+[ext_resource type="Theme" uid="uid://coj7v36skt7iu" path="res://theme/main_theme.tres" id="1_olvnx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw4n3"]
+size = Vector2(25, 35)
+
+[node name="CardUI" type="Control"]
+custom_minimum_size = Vector2(25, 35)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -231.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_olvnx")
+
+[node name="Color" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0953823, 0.311546, 0.228116, 1)
+
+[node name="State" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "状态"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DropPointDetecter" type="Area2D" parent="."]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetecter"]
+position = Vector2(12.5, 17.5)
+shape = SubResource("RectangleShape2D_pw4n3")

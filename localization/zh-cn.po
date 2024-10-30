@@ -11,14 +11,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: deck builder game\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: zh-cn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: scenes/card_ui/card_ui.tscn scenes/card_ui/card_state/card_base_state.gd
+#: scenes/card_ui/card_ui.tscn
+msgid "STATE"
+msgstr ""
+
+#: scenes/card_ui/card_state/card_base_state.gd
 msgid "BASE"
 msgstr "基础"
 
@@ -33,3 +37,7 @@ msgstr "拖拽"
 #: scenes/card_ui/card_state/card_released_state.gd
 msgid "RELEASED"
 msgstr "释放"
+
+#: scenes/card_ui/card_state/card_aiming_state.gd
+msgid "AIMING"
+msgstr "瞄准"

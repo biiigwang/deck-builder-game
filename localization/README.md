@@ -100,6 +100,13 @@ msgstr "释放"
 
 ```
 
+## 更新`.po`文件
+在更新`.pot`文件后需要同步更新资源文件`.po`文件，删除不复存在的文本，增加新的内容，命令如下：
+```bash
+# The order matters: specify the message file *then* the PO template!
+msgmerge --update --backup=none your.po your.pot
+```
+
 ## Godot加载`.po`文件
 翻译完毕后就可以从godot中加载该翻译资源了
 在 `Project` -> `Project Setting` -> `Localization` -> `Translations`点击`Add`，选择对应的`.po`翻译资源进行翻译

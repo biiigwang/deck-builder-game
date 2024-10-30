@@ -5,6 +5,7 @@
 # res://scenes/card_ui/card_state/card_dragging_state.gd
 # res://scenes/card_ui/card_state/card_released_state.gd
 # res://scenes/battle/battle.tscn
+# res://scenes/card_ui/card_state/card_aiming_state.gd
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -17,6 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: scenes/card_ui/card_ui.tscn
+msgid "STATE"
+msgstr ""
+
 #: scenes/card_ui/card_state/card_base_state.gd
 msgid "BASE"
 msgstr ""
@@ -31,4 +35,8 @@ msgstr ""
 
 #: scenes/card_ui/card_state/card_released_state.gd
 msgid "RELEASED"
+msgstr ""
+
+#: scenes/card_ui/card_state/card_aiming_state.gd
+msgid "AIMING"
 msgstr ""

@@ -10,7 +10,6 @@ func enter() -> void:
 	# 发送重新父化信号
 	card_ui.reparent_requested.emit(card_ui)
 	card_ui.color.color = Color.WEB_GREEN
-	# TODO:[本地化文本]根据设置语言自动翻译文本
 	card_ui.state.text = "BASE"
 	# 调整卡片旋转中心偏移量，不希望卡片左上角紧贴鼠标指针，希望卡片中心跟随指针
 	# 在基础状态将其初始化为0

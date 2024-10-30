@@ -9,7 +9,6 @@ func enter() -> void:
 		card_ui.reparent(ui_layer)
 
 	card_ui.color.color = Color.NAVY_BLUE
-	# TODO:[本地化文本]根据设置语言自动翻译文本
 	card_ui.state.text = "DRAGGING"
 
 	# 添加状态转移判断死区处理

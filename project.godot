@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="deck builder game"
+config/name_localized={
+"en": "Deck Builder Game",
+"zh": "类杀戮尖塔卡牌游戏"
+}
 run/main_scene="res://scenes/battle/battle.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.png"
+
+[autoload]
+
+Events="*res://global/events.gd"
 
 [display]
 
@@ -36,10 +44,18 @@ right_mouse={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization/zh-cn.po")
+locale/translations_pot_files=PackedStringArray("res://scenes/card_ui/card_ui.tscn", "res://scenes/card_ui/card_state/card_base_state.gd", "res://scenes/card_ui/card_state/card_clicked_state.gd", "res://scenes/card_ui/card_state/card_dragging_state.gd", "res://scenes/card_ui/card_state/card_released_state.gd", "res://scenes/battle/battle.tscn", "res://scenes/card_ui/card_state/card_aiming_state.gd")
+locale/locale_filter_mode=1
+locale/language_filter=["en", "zh"]
+
 [layer_names]
 
 2d_physics/layer_1="card_target_selector"
 2d_physics/layer_2="card_drop_area"
+2d_physics/layer_3="enemies"
 
 [rendering]
 

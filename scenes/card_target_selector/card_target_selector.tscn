@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmu67oxep1u7l"]
+
+[ext_resource type="Script" path="res://scenes/card_target_selector/card_target_selector.gd" id="1_a4y31"]
+[ext_resource type="PackedScene" uid="uid://cpdr5rnbcwpm7" path="res://scenes/card_target_selector/card_arc.tscn" id="1_btdqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrjuq"]
+size = Vector2(4, 4)
+
+[sub_resource type="Curve" id="Curve_xexi8"]
+_data = [Vector2(0, 0.209412), 0.0, 0.0, 0, 0, Vector2(0.967391, 1), 1.1346, 0.0, 0, 0, Vector2(0.983696, 0.129412), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="CardTargetSelector" type="Node2D"]
+script = ExtResource("1_a4y31")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wrjuq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="CardArc" parent="CanvasLayer" instance=ExtResource("1_btdqq")]
+width_curve = SubResource("Curve_xexi8")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

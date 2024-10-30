@@ -7,6 +7,10 @@ func enter() -> void:
 		# await会将控制权交还给调用方，当接收到card_ui的ready信号时继续运行
 		await card_ui.ready
 
+	# 检测CardUI的tween动画是否存在且正在运行，如果存在且运行则停止，放置卡在手牌中心
+	if card_ui.tween and card_ui.tween.is_running():
+		card_ui.tween.kill()
+
 	# 发送重新父化信号
 	card_ui.reparent_requested.emit(card_ui)
 	card_ui.color.color = Color.WEB_GREEN

@@ -11,6 +11,7 @@ enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE}
 @export var id: String
 @export var type: Type
 @export var target: Target
+@export var cost: int
 
 # 判断自身是否为单体效果卡片
 func is_single_targeted() -> bool:
